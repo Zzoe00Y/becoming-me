@@ -433,27 +433,7 @@ const scenes = {
                     }
                 ]
             },
-            notifications: {
-                title: "Notifications",
-                text: [
-                    "The little badges, pings, and previews feel exciting until they do not.",
-                    "Being wanted and being watched can look similar online."
-                ],
-                choices: [
-                    {
-                        key: "online-notify-check",
-                        label: "Check every notification immediately.",
-                        result: "Hope and anxiety rise together.",
-                        effects: { identity: 0, safety: -1, support: 1 }
-                    },
-                    {
-                        key: "online-notify-mute",
-                        label: "Mute everything for now.",
-                        result: "Silence is a kind of protection too.",
-                        effects: { identity: 0, safety: 1, support: 0 }
-                    }
-                ]
-            },
+
             self: {
                 title: "Your Thoughts",
                 text: [
