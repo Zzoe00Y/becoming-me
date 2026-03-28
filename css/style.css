@@ -569,3 +569,24 @@ body::before {
     border-color: rgba(255, 143, 212, 0.45);
     transform: translateY(-1px);
 }
+
+.scene-column {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+}
+
+.scene-helper {
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.scene-helper p {
+    margin: 0;
+}

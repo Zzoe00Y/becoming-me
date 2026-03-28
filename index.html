@@ -40,6 +40,7 @@
             <p>
                 Explore rooms, objects, institutions, and moments. Each choice changes how the
                 character understands themself, how safe they feel, and how much support they have.
+                Make sure you have explored all items in each panel and make choices to see different endings.
             </p>
         </div>
     </section>
@@ -60,53 +61,56 @@
 
             <div class="panel-content">
                 <div class="scene-layout">
-                    <div class="scene-frame childhood-scene" id="scene-childhood">
-                        <img id="childhood-scene-image" src="pictures/stage1room.png" alt="Childhood room" />
+                    <div class="scene-column">
+                        <div class="scene-frame childhood-scene" id="scene-childhood">
+                            <img id="childhood-scene-image" src="pictures/stage1room.png" alt="Childhood room" />
 
-                        <!-- closet -->
-                        <button
-                                class="hotspot"
-                                style="left: 7%; top: 10%; width: 22%; height: 60%;"
-                                data-scene="childhood"
-                                data-object="closet"
-                                aria-label="Closet">
-                        </button>
+                            <!-- closet -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 7%; top: 10%; width: 22%; height: 60%;"
+                                    data-scene="childhood"
+                                    data-object="closet"
+                                    aria-label="Closet">
+                            </button>
 
-                        <!-- doll -->
-                        <button
-                                class="hotspot"
-                                style="left: 52%; top: 67%; width: 10%; height: 16%;"
-                                data-scene="childhood"
-                                data-object="doll"
-                                aria-label="Doll">
-                        </button>
+                            <!-- doll -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 52%; top: 67%; width: 10%; height: 16%;"
+                                    data-scene="childhood"
+                                    data-object="doll"
+                                    aria-label="Doll">
+                            </button>
 
-                        <!-- diary on desk -->
-                        <button
-                                class="hotspot"
-                                style="left: 60%; top: 53%; width: 12%; height: 10%;"
-                                data-scene="childhood"
-                                data-object="diary"
-                                aria-label="Diary">
-                        </button>
+                            <!-- diary on desk -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 60%; top: 53%; width: 12%; height: 10%;"
+                                    data-scene="childhood"
+                                    data-object="diary"
+                                    aria-label="Diary">
+                            </button>
 
-                        <!-- family photo -->
-                        <button
-                                class="hotspot"
-                                style="left: 58%; top: 33%; width: 14%; height: 12%;"
-                                data-scene="childhood"
-                                data-object="family"
-                                aria-label="Family photo">
-                        </button>
+                            <!-- family photo -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 58%; top: 33%; width: 14%; height: 12%;"
+                                    data-scene="childhood"
+                                    data-object="family"
+                                    aria-label="Family photo">
+                            </button>
 
-                        <!-- self / character -->
-                        <button
-                                class="hotspot"
-                                style="left: 42%; top: 56%; width: 10%; height: 28%;"
-                                data-scene="childhood"
-                                data-object="self"
-                                aria-label="Your thoughts">
-                        </button>
+                            <!-- self / character -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 42%; top: 56%; width: 10%; height: 28%;"
+                                    data-scene="childhood"
+                                    data-object="self"
+                                    aria-label="Your thoughts">
+                            </button>
+                        </div>
+                        <div class="scene-helper" id="helper-childhood"></div>
                     </div>
 
                     <aside class="interaction-box">
@@ -143,62 +147,65 @@
 
             <div class="panel-content">
                 <div class="scene-layout">
-                    <div class="scene-frame" id="scene-classroom">
-                        <img src="pictures/stage2classroom.png" alt="Classroom" />
+                    <div class="scene-column">
+                        <div class="scene-frame" id="scene-classroom">
+                            <img src="pictures/stage2classroom.png" alt="Classroom" />
 
-                        <!-- lockers -->
-                        <button
-                                class="hotspot"
-                                style="left: 0%; top: 12%; width: 19%; height: 58%;"
-                                data-scene="classroom"
-                                data-object="lockers"
-                                aria-label="Lockers">
-                        </button>
+                            <!-- lockers -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 0%; top: 12%; width: 19%; height: 58%;"
+                                    data-scene="classroom"
+                                    data-object="lockers"
+                                    aria-label="Lockers">
+                            </button>
 
-                        <!-- blackboard -->
-                        <button
-                                class="hotspot"
-                                style="left: 30%; top: 25%; width: 40%; height: 18%;"
-                                data-scene="classroom"
-                                data-object="blackboard"
-                                aria-label="Blackboard">
-                        </button>
+                            <!-- blackboard -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 30%; top: 25%; width: 40%; height: 18%;"
+                                    data-scene="classroom"
+                                    data-object="blackboard"
+                                    aria-label="Blackboard">
+                            </button>
 
-                        <!-- desk -->
-                        <button
-                                class="hotspot"
-                                style="left: 38%; top: 75%; width: 26%; height: 20%;"
-                                data-scene="classroom"
-                                data-object="desk"
-                                aria-label="Desk">
-                        </button>
+                            <!-- desk -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 38%; top: 75%; width: 26%; height: 20%;"
+                                    data-scene="classroom"
+                                    data-object="desk"
+                                    aria-label="Desk">
+                            </button>
 
-                        <!-- drawer / diary -->
-                        <button
-                                class="hotspot"
-                                style="left: 58%; top: 78%; width: 11%; height: 10%;"
-                                data-scene="classroom"
-                                data-object="drawer"
-                                aria-label="Drawer">
-                        </button>
+                            <!-- drawer / diary -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 58%; top: 78%; width: 11%; height: 10%;"
+                                    data-scene="classroom"
+                                    data-object="drawer"
+                                    aria-label="Drawer">
+                            </button>
 
-                        <!-- backpack -->
-                        <button
-                                class="hotspot"
-                                style="left: 53%; top: 51%; width: 13%; height: 16%;"
-                                data-scene="classroom"
-                                data-object="bag"
-                                aria-label="Backpack">
-                        </button>
+                            <!-- backpack -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 53%; top: 51%; width: 13%; height: 16%;"
+                                    data-scene="classroom"
+                                    data-object="bag"
+                                    aria-label="Backpack">
+                            </button>
 
-                        <!-- self / character -->
-                        <button
-                                class="hotspot self-hotspot"
-                                style="left: 45%; top: 42%; width: 14%; height: 27%;"
-                                data-scene="classroom"
-                                data-object="self"
-                                aria-label="Your thoughts">
-                        </button>
+                            <!-- self / character -->
+                            <button
+                                    class="hotspot self-hotspot"
+                                    style="left: 45%; top: 42%; width: 14%; height: 27%;"
+                                    data-scene="classroom"
+                                    data-object="self"
+                                    aria-label="Your thoughts">
+                            </button>
+                        </div>
+                        <div class="scene-helper" id="helper-classroom"></div>
                     </div>
 
                     <aside class="interaction-box">
@@ -235,62 +242,65 @@
 
             <div class="panel-content">
                 <div class="scene-layout">
-                    <div class="scene-frame" id="scene-online">
-                        <img src="pictures/stage3online.png" alt="Online scene" />
+                    <div class="scene-column">
+                        <div class="scene-frame" id="scene-online">
+                            <img src="pictures/stage3online.png" alt="Online scene" />
 
-                        <!-- profile setup -->
-                        <button
-                                class="hotspot"
-                                style="left: 4%; top: 12%; width: 31%; height: 18%;"
-                                data-scene="online"
-                                data-object="profile"
-                                aria-label="Profile setup">
-                        </button>
+                            <!-- profile setup -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 4%; top: 12%; width: 31%; height: 18%;"
+                                    data-scene="online"
+                                    data-object="profile"
+                                    aria-label="Profile setup">
+                            </button>
 
-                        <!-- pronouns -->
-                        <button
-                                class="hotspot"
-                                style="left: 7%; top: 31%; width: 28%; height: 16%;"
-                                data-scene="online"
-                                data-object="pronouns"
-                                aria-label="Pronouns">
-                        </button>
+                            <!-- pronouns -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 7%; top: 31%; width: 28%; height: 16%;"
+                                    data-scene="online"
+                                    data-object="pronouns"
+                                    aria-label="Pronouns">
+                            </button>
 
-                        <!-- about me -->
-                        <button
-                                class="hotspot"
-                                style="left: 7%; top: 58%; width: 28%; height: 15%;"
-                                data-scene="online"
-                                data-object="about"
-                                aria-label="About me">
-                        </button>
+                            <!-- about me -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 7%; top: 58%; width: 28%; height: 15%;"
+                                    data-scene="online"
+                                    data-object="about"
+                                    aria-label="About me">
+                            </button>
 
-                        <!-- feed -->
-                        <button
-                                class="hotspot"
-                                style="left: 38%; top: 15%; width: 29%; height: 48%;"
-                                data-scene="online"
-                                data-object="feed"
-                                aria-label="Feed">
-                        </button>
+                            <!-- feed -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 38%; top: 15%; width: 29%; height: 48%;"
+                                    data-scene="online"
+                                    data-object="feed"
+                                    aria-label="Feed">
+                            </button>
 
-                        <!-- messages -->
-                        <button
-                                class="hotspot"
-                                style="left: 69%; top: 14%; width: 24%; height: 54%;"
-                                data-scene="online"
-                                data-object="messages"
-                                aria-label="Messages">
-                        </button>
+                            <!-- messages -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 69%; top: 14%; width: 24%; height: 54%;"
+                                    data-scene="online"
+                                    data-object="messages"
+                                    aria-label="Messages">
+                            </button>
 
-                        <!-- self / character -->
-                        <button
-                                class="hotspot self-hotspot"
-                                style="left: 35%; top: 63%; width: 26%; height: 24%;"
-                                data-scene="online"
-                                data-object="self"
-                                aria-label="Your thoughts">
-                        </button>
+                            <!-- self / character -->
+                            <button
+                                    class="hotspot self-hotspot"
+                                    style="left: 35%; top: 63%; width: 26%; height: 24%;"
+                                    data-scene="online"
+                                    data-object="self"
+                                    aria-label="Your thoughts">
+                            </button>
+                        </div>
+                        <div class="scene-helper" id="helper-online"></div>
                     </div>
 
                     <aside class="interaction-box">
@@ -327,14 +337,17 @@
 
             <div class="panel-content">
                 <div class="scene-layout">
-                    <div class="scene-frame" id="scene-job">
-                        <img src="pictures/stage4job.png" alt="Job waiting room" />
+                    <div class="scene-column">
+                        <div class="scene-frame" id="scene-job">
+                            <img src="pictures/stage4job.png" alt="Job waiting room" />
 
-                        <button class="hotspot" style="left: 0%; top: 60%; width: 17%; height: 35%;" data-scene="job" data-object="coverletter"></button>
-                        <button class="hotspot" style="left: 28%; top: 66%; width: 14%; height: 25%;" data-scene="job" data-object="resume"></button>
-                        <button class="hotspot" style="left: 41%; top: 67%; width: 18%; height: 25%;" data-scene="job" data-object="handbook"></button>
-                        <button class="hotspot" style="left: 58%; top: 40%; width: 18%; height: 28%;" data-scene="job" data-object="self"></button>
-                        <button class="hotspot" style="left: 12%; top: 40%; width: 22%; height: 23%;" data-scene="job" data-object="reception"></button>
+                            <button class="hotspot" style="left: 0%; top: 60%; width: 17%; height: 35%;" data-scene="job" data-object="coverletter"></button>
+                            <button class="hotspot" style="left: 28%; top: 66%; width: 14%; height: 25%;" data-scene="job" data-object="resume"></button>
+                            <button class="hotspot" style="left: 41%; top: 67%; width: 18%; height: 25%;" data-scene="job" data-object="handbook"></button>
+                            <button class="hotspot" style="left: 58%; top: 40%; width: 18%; height: 28%;" data-scene="job" data-object="self"></button>
+                            <button class="hotspot" style="left: 12%; top: 40%; width: 22%; height: 23%;" data-scene="job" data-object="reception"></button>
+                        </div>
+                        <div class="scene-helper" id="helper-job"></div>
                     </div>
 
                     <aside class="interaction-box">
@@ -371,53 +384,56 @@
 
             <div class="panel-content">
                 <div class="scene-layout">
-                    <div class="scene-frame" id="scene-clinic">
-                        <img src="pictures/stage5clinic.png" alt="Clinic scene" />
+                    <div class="scene-column">
+                        <div class="scene-frame" id="scene-clinic">
+                            <img src="pictures/stage5clinic.png" alt="Clinic scene" />
 
-                        <!-- intake / papers in patient's hands and on left side -->
-                        <button
-                                class="hotspot"
-                                style="left: 20%; top: 65%; width: 10%; height: 20%;"
-                                data-scene="clinic"
-                                data-object="intake"
-                                aria-label="Intake form">
-                        </button>
+                            <!-- intake / papers in patient's hands and on left side -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 20%; top: 65%; width: 10%; height: 20%;"
+                                    data-scene="clinic"
+                                    data-object="intake"
+                                    aria-label="Intake form">
+                            </button>
 
-                        <!-- doctor -->
-                        <button
-                                class="hotspot"
-                                style="left: 62%; top: 32%; width: 24%; height: 42%;"
-                                data-scene="clinic"
-                                data-object="doctor"
-                                aria-label="Doctor">
-                        </button>
+                            <!-- doctor -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 62%; top: 32%; width: 24%; height: 42%;"
+                                    data-scene="clinic"
+                                    data-object="doctor"
+                                    aria-label="Doctor">
+                            </button>
 
-                        <!-- medical chart / documents on desk -->
-                        <button
-                                class="hotspot"
-                                style="left: 41%; top: 56%; width: 37%; height: 28%;"
-                                data-scene="clinic"
-                                data-object="chart"
-                                aria-label="Medical chart">
-                        </button>
+                            <!-- medical chart / documents on desk -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 41%; top: 56%; width: 37%; height: 28%;"
+                                    data-scene="clinic"
+                                    data-object="chart"
+                                    aria-label="Medical chart">
+                            </button>
 
-                        <!-- mirror -->
-                        <button
-                                class="hotspot"
-                                style="left: 90%; top: 16%; width: 10%; height: 22%;"
-                                data-scene="clinic"
-                                data-object="mirror"
-                                aria-label="Mirror">
-                        </button>
+                            <!-- mirror -->
+                            <button
+                                    class="hotspot"
+                                    style="left: 90%; top: 16%; width: 10%; height: 22%;"
+                                    data-scene="clinic"
+                                    data-object="mirror"
+                                    aria-label="Mirror">
+                            </button>
 
-                        <!-- self / patient -->
-                        <button
-                                class="hotspot self-hotspot"
-                                style="left: 10%; top: 30%; width: 21%; height: 44%;"
-                                data-scene="clinic"
-                                data-object="self"
-                                aria-label="Your thoughts">
-                        </button>
+                            <!-- self / patient -->
+                            <button
+                                    class="hotspot self-hotspot"
+                                    style="left: 10%; top: 30%; width: 21%; height: 44%;"
+                                    data-scene="clinic"
+                                    data-object="self"
+                                    aria-label="Your thoughts">
+                            </button>
+                        </div>
+                        <div class="scene-helper" id="helper-clinic"></div>
                     </div>
 
                     <aside class="interaction-box">

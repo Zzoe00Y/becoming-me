@@ -16,6 +16,67 @@ const exploredByPanel = {
 
 const choiceEffectsMap = new Map();
 
+function getObjectLabel(sceneKey, objectKey) {
+    const labels = {
+        childhood: {
+            closet: "closet",
+            doll: "doll",
+            diary: "diary",
+            family: "family photo",
+            self: "your thoughts"
+        },
+        classroom: {
+            desk: "desk",
+            drawer: "drawer",
+            blackboard: "blackboard",
+            lockers: "lockers",
+            bag: "backpack",
+            self: "your thoughts"
+        },
+        online: {
+            profile: "profile",
+            pronouns: "pronouns",
+            about: "about me",
+            feed: "feed",
+            messages: "messages",
+            self: "your thoughts"
+        },
+        job: {
+            coverletter: "cover letter",
+            resume: "resume",
+            handbook: "employee handbook",
+            reception: "reception desk",
+            self: "your thoughts"
+        },
+        clinic: {
+            intake: "intake form",
+            doctor: "doctor",
+            chart: "medical chart",
+            mirror: "mirror",
+            self: "your thoughts"
+        }
+    };
+
+    return labels[sceneKey][objectKey];
+}
+
+function updateSceneHelper(sceneKey) {
+    const helperEl = document.getElementById(`helper-${sceneKey}`);
+    if (!helperEl) return;
+
+    const allObjects = Object.keys(scenes[sceneKey].objects);
+    const explored = exploredByPanel[sceneKey];
+    const remaining = allObjects.filter(key => !explored.has(key));
+
+    if (remaining.length === 0) {
+        helperEl.innerHTML = `<p>All objects explored in this stage.</p>`;
+        return;
+    }
+
+    const names = remaining.map(key => getObjectLabel(sceneKey, key));
+    helperEl.innerHTML = `<p>Still to explore: ${names.join(", ")}.</p>`;
+}
+
 function updatePanelCounts() {
     Object.keys(scenes).forEach(sceneKey => {
         const countEl = document.getElementById(`count-${sceneKey}`);
@@ -24,6 +85,8 @@ function updatePanelCounts() {
         const explored = exploredByPanel[sceneKey].size;
         const total = Object.keys(scenes[sceneKey].objects).length;
         countEl.textContent = `Explored ${explored} / ${total}`;
+
+        updateSceneHelper(sceneKey);
     });
 }
 
@@ -829,6 +892,13 @@ function updateEnding() {
     const text = document.getElementById("ending-text");
     const image = document.getElementById("ending-image");
     const visual = document.getElementById("ending-visual");
+
+    if (chosen.size === 0) {
+        title.textContent = "Still Becoming";
+        text.textContent = "Make your first choice to begin shaping the story.";
+        visual.classList.add("is-hidden");
+        return;
+    }
 
     if (stats.identity >= 8 && stats.support >= 6) {
         title.textContent = "Thriving in Chosen Community";
