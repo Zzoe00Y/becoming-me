@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Becoming Me</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="grain"></div>
+
+<header class="topbar">
+    <div class="brand">
+        <div class="brand-kicker">SDS246 PROJECT</div>
+        <h1>Becoming Me</h1>
+        <p class="brand-sub">A pixel narrative of queer/trans growth</p>
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <span class="stat-label">Identity</span>
+            <span class="stat-value" id="stat-identity">0</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Safety</span>
+            <span class="stat-value" id="stat-safety">5</span>
+        </div>
+        <div class="stat-box">
+            <span class="stat-label">Support</span>
+            <span class="stat-value" id="stat-support">0</span>
+        </div>
+    </div>
+</header>
+
+<main class="page">
+    <section class="intro-panel">
+        <div class="intro-copy">
+            <p class="eyebrow">Interactive timeline</p>
+            <h2>Click each stage to enter the scene.</h2>
+            <p>
+                Explore rooms, objects, institutions, and moments. Each choice changes how the
+                character understands themself, how safe they feel, and how much support they have.
+            </p>
+        </div>
+    </section>
+
+    <section class="story-list">
+
+        <!-- PANEL 1 -->
+        <article class="story-panel" data-panel="childhood">
+            <button class="panel-cover">
+                <div class="panel-meta">
+                    <span class="panel-tag">Stage 1</span>
+                    <h3>Childhood</h3>
+                    <p>The room where difference first becomes visible.</p>
+                </div>
+                <img src="stage1room.png" alt="Childhood bedroom scene" />
+                <span class="enter-hint">Click to explore</span>
+            </button>
+
+            <div class="panel-content">
+                <div class="scene-layout">
+                    <div class="scene-frame childhood-scene" id="scene-childhood">
+                        <img id="childhood-scene-image" src="stage1room.png" alt="Childhood room" />
+
+                        <!-- closet -->
+                        <button
+                                class="hotspot"
+                                style="left: 7%; top: 10%; width: 22%; height: 60%;"
+                                data-scene="childhood"
+                                data-object="closet"
+                                aria-label="Closet">
+                        </button>
+
+                        <!-- doll -->
+                        <button
+                                class="hotspot"
+                                style="left: 52%; top: 67%; width: 10%; height: 16%;"
+                                data-scene="childhood"
+                                data-object="doll"
+                                aria-label="Doll">
+                        </button>
+
+                        <!-- diary on desk -->
+                        <button
+                                class="hotspot"
+                                style="left: 60%; top: 53%; width: 12%; height: 10%;"
+                                data-scene="childhood"
+                                data-object="diary"
+                                aria-label="Diary">
+                        </button>
+
+                        <!-- family photo -->
+                        <button
+                                class="hotspot"
+                                style="left: 58%; top: 33%; width: 14%; height: 12%;"
+                                data-scene="childhood"
+                                data-object="family"
+                                aria-label="Family photo">
+                        </button>
+
+                        <!-- self / character -->
+                        <button
+                                class="hotspot"
+                                style="left: 42%; top: 56%; width: 10%; height: 28%;"
+                                data-scene="childhood"
+                                data-object="self"
+                                aria-label="Your thoughts">
+                        </button>
+                    </div>
+
+                    <aside class="interaction-box">
+                        <div class="box-header">
+                            <span class="box-scene">Stage 1 / Childhood</span>
+                            <div class="box-topline">
+                                <h4 id="interaction-title">Click an object</h4>
+                                <span class="explore-count" id="count-childhood">Explored 0 / 5</span>
+                            </div>
+                            <button class="panel-reset-btn" data-reset-panel="childhood">Reset panel</button>
+                        </div>
+
+                        <div id="interaction-body" class="interaction-body">
+                            <p class="placeholder">
+                                Explore the closet, doll, diary, family photo, or your own thoughts.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+        <!-- PANEL 2 -->
+        <article class="story-panel" data-panel="classroom">
+            <button class="panel-cover">
+                <div class="panel-meta">
+                    <span class="panel-tag">Stage 2</span>
+                    <h3>Adolescence</h3>
+                    <p>A classroom full of rules, fear, and private writing.</p>
+                </div>
+                <img src="stage2classroom.png" alt="Classroom scene" />
+                <span class="enter-hint">Click to explore</span>
+            </button>
+
+            <div class="panel-content">
+                <div class="scene-layout">
+                    <div class="scene-frame" id="scene-classroom">
+                        <img src="stage2classroom.png" alt="Classroom" />
+
+                        <!-- lockers -->
+                        <button
+                                class="hotspot"
+                                style="left: 0%; top: 12%; width: 19%; height: 58%;"
+                                data-scene="classroom"
+                                data-object="lockers"
+                                aria-label="Lockers">
+                        </button>
+
+                        <!-- blackboard -->
+                        <button
+                                class="hotspot"
+                                style="left: 30%; top: 25%; width: 40%; height: 18%;"
+                                data-scene="classroom"
+                                data-object="blackboard"
+                                aria-label="Blackboard">
+                        </button>
+
+                        <!-- desk -->
+                        <button
+                                class="hotspot"
+                                style="left: 38%; top: 75%; width: 26%; height: 20%;"
+                                data-scene="classroom"
+                                data-object="desk"
+                                aria-label="Desk">
+                        </button>
+
+                        <!-- drawer / diary -->
+                        <button
+                                class="hotspot"
+                                style="left: 58%; top: 78%; width: 11%; height: 10%;"
+                                data-scene="classroom"
+                                data-object="drawer"
+                                aria-label="Drawer">
+                        </button>
+
+                        <!-- backpack -->
+                        <button
+                                class="hotspot"
+                                style="left: 53%; top: 51%; width: 13%; height: 16%;"
+                                data-scene="classroom"
+                                data-object="bag"
+                                aria-label="Backpack">
+                        </button>
+
+                        <!-- self / character -->
+                        <button
+                                class="hotspot self-hotspot"
+                                style="left: 45%; top: 42%; width: 14%; height: 27%;"
+                                data-scene="classroom"
+                                data-object="self"
+                                aria-label="Your thoughts">
+                        </button>
+                    </div>
+
+                    <aside class="interaction-box">
+                        <div class="box-header">
+                            <span class="box-scene">Stage 2 / Adolescence</span>
+                            <div class="box-topline">
+                                <h4 id="interaction-title-classroom">Click an object</h4>
+                                <span class="explore-count" id="count-classroom">Explored 0 / 6</span>
+                            </div>
+                            <button class="panel-reset-btn" data-reset-panel="classroom">Reset panel</button>
+                        </div>
+
+                        <div id="interaction-body-classroom" class="interaction-body">
+                            <p class="placeholder">
+                                Explore the desk, drawer, blackboard, lockers, backpack, or your own thoughts.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+        <!-- PANEL 3 -->
+        <article class="story-panel" data-panel="online">
+            <button class="panel-cover">
+                <div class="panel-meta">
+                    <span class="panel-tag">Stage 3</span>
+                    <h3>Online</h3>
+                    <p>Discovery, connection, and risk behind the screen.</p>
+                </div>
+                <img src="stage3online.png" alt="Online / app scene" />
+                <span class="enter-hint">Click to explore</span>
+            </button>
+
+            <div class="panel-content">
+                <div class="scene-layout">
+                    <div class="scene-frame" id="scene-online">
+                        <img src="stage3online.png" alt="Online scene" />
+
+                        <!-- profile setup -->
+                        <button
+                                class="hotspot"
+                                style="left: 4%; top: 12%; width: 31%; height: 18%;"
+                                data-scene="online"
+                                data-object="profile"
+                                aria-label="Profile setup">
+                        </button>
+
+                        <!-- pronouns -->
+                        <button
+                                class="hotspot"
+                                style="left: 7%; top: 31%; width: 28%; height: 16%;"
+                                data-scene="online"
+                                data-object="pronouns"
+                                aria-label="Pronouns">
+                        </button>
+
+                        <!-- about me -->
+                        <button
+                                class="hotspot"
+                                style="left: 7%; top: 58%; width: 28%; height: 15%;"
+                                data-scene="online"
+                                data-object="about"
+                                aria-label="About me">
+                        </button>
+
+                        <!-- feed -->
+                        <button
+                                class="hotspot"
+                                style="left: 38%; top: 15%; width: 29%; height: 48%;"
+                                data-scene="online"
+                                data-object="feed"
+                                aria-label="Feed">
+                        </button>
+
+                        <!-- messages -->
+                        <button
+                                class="hotspot"
+                                style="left: 69%; top: 14%; width: 24%; height: 54%;"
+                                data-scene="online"
+                                data-object="messages"
+                                aria-label="Messages">
+                        </button>
+
+                        <!-- self / character -->
+                        <button
+                                class="hotspot self-hotspot"
+                                style="left: 35%; top: 63%; width: 26%; height: 24%;"
+                                data-scene="online"
+                                data-object="self"
+                                aria-label="Your thoughts">
+                        </button>
+                    </div>
+
+                    <aside class="interaction-box">
+                        <div class="box-header">
+                            <span class="box-scene">Stage 3 / Online</span>
+                            <div class="box-topline">
+                                <h4 id="interaction-title-online">Click an object</h4>
+                                <span class="explore-count" id="count-online">Explored 0 / 6</span>
+                            </div>
+                            <button class="panel-reset-btn" data-reset-panel="online">Reset panel</button>
+                        </div>
+
+                        <div id="interaction-body-online" class="interaction-body">
+                            <p class="placeholder">
+                                Explore your profile, pronouns, about me, feed, messages, or your own thoughts.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+        <!-- PANEL 4 -->
+        <article class="story-panel" data-panel="job">
+            <button class="panel-cover">
+                <div class="panel-meta">
+                    <span class="panel-tag">Stage 4</span>
+                    <h3>Job Search</h3>
+                    <p>Professionalism, presentation, and institutional pressure.</p>
+                </div>
+                <img src="stage4job.png" alt="Job waiting room scene" />
+                <span class="enter-hint">Click to explore</span>
+            </button>
+
+            <div class="panel-content">
+                <div class="scene-layout">
+                    <div class="scene-frame" id="scene-job">
+                        <img src="stage4job.png" alt="Job waiting room" />
+
+                        <button class="hotspot" style="left: 0%; top: 60%; width: 17%; height: 35%;" data-scene="job" data-object="coverletter"></button>
+                        <button class="hotspot" style="left: 28%; top: 66%; width: 14%; height: 16%;" data-scene="job" data-object="resume"></button>
+                        <button class="hotspot" style="left: 41%; top: 67%; width: 18%; height: 16%;" data-scene="job" data-object="handbook"></button>
+                        <button class="hotspot" style="left: 58%; top: 40%; width: 18%; height: 28%;" data-scene="job" data-object="self"></button>
+                        <button class="hotspot" style="left: 12%; top: 40%; width: 22%; height: 23%;" data-scene="job" data-object="reception"></button>
+                    </div>
+
+                    <aside class="interaction-box">
+                        <div class="box-header">
+                            <span class="box-scene">Stage 4 / Job Search</span>
+                            <div class="box-topline">
+                                <h4 id="interaction-title-job">Click an object</h4>
+                                <span class="explore-count" id="count-job">Explored 0 / 5</span>
+                            </div>
+                            <button class="panel-reset-btn" data-reset-panel="job">Reset panel</button>
+                        </div>
+
+                        <div id="interaction-body-job" class="interaction-body">
+                            <p class="placeholder">
+                                Explore the cover letter, resume, employee handbook, reception desk, or your own thoughts.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+        <!-- PANEL 5 -->
+        <article class="story-panel" data-panel="clinic">
+            <button class="panel-cover">
+                <div class="panel-meta">
+                    <span class="panel-tag">Stage 5</span>
+                    <h3>Clinic</h3>
+                    <p>Care, bureaucracy, and being seen by institutions.</p>
+                </div>
+                <img src="stage5clinic.png" alt="Clinic consultation scene" />
+                <span class="enter-hint">Click to explore</span>
+            </button>
+
+            <div class="panel-content">
+                <div class="scene-layout">
+                    <div class="scene-frame" id="scene-clinic">
+                        <img src="stage5clinic.png" alt="Clinic scene" />
+
+                        <!-- intake / papers in patient's hands and on left side -->
+                        <button
+                                class="hotspot"
+                                style="left: 20%; top: 65%; width: 10%; height: 20%;"
+                                data-scene="clinic"
+                                data-object="intake"
+                                aria-label="Intake form">
+                        </button>
+
+                        <!-- doctor -->
+                        <button
+                                class="hotspot"
+                                style="left: 62%; top: 32%; width: 24%; height: 42%;"
+                                data-scene="clinic"
+                                data-object="doctor"
+                                aria-label="Doctor">
+                        </button>
+
+                        <!-- medical chart / documents on desk -->
+                        <button
+                                class="hotspot"
+                                style="left: 41%; top: 56%; width: 37%; height: 28%;"
+                                data-scene="clinic"
+                                data-object="chart"
+                                aria-label="Medical chart">
+                        </button>
+
+                        <!-- mirror -->
+                        <button
+                                class="hotspot"
+                                style="left: 90%; top: 16%; width: 10%; height: 22%;"
+                                data-scene="clinic"
+                                data-object="mirror"
+                                aria-label="Mirror">
+                        </button>
+
+                        <!-- self / patient -->
+                        <button
+                                class="hotspot self-hotspot"
+                                style="left: 10%; top: 30%; width: 21%; height: 44%;"
+                                data-scene="clinic"
+                                data-object="self"
+                                aria-label="Your thoughts">
+                        </button>
+                    </div>
+
+                    <aside class="interaction-box">
+                        <div class="box-header">
+                            <span class="box-scene">Stage 5 / Clinic</span>
+                            <div class="box-topline">
+                                <h4 id="interaction-title-clinic">Click an object</h4>
+                                <span class="explore-count" id="count-clinic">Explored 0 / 5</span>
+                            </div>
+                            <button class="panel-reset-btn" data-reset-panel="clinic">Reset panel</button>
+                        </div>
+
+                        <div id="interaction-body-clinic" class="interaction-body">
+                            <p class="placeholder">
+                                Explore the intake form, doctor, medical chart, mirror, or your own thoughts.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="ending-panel">
+        <div class="ending-card ending-layout">
+            <div class="ending-copy">
+                <p class="eyebrow">Ending</p>
+                <h3 id="ending-title">Still Becoming</h3>
+                <p id="ending-text">
+                    Identity, safety, and support do not move in a straight line. Your path is still unfolding.
+                </p>
+                <button id="ending-btn" class="ending-btn">Update Ending</button>
+            </div>
+
+            <div class="ending-visual" id="ending-visual">
+                <img id="ending-image" src="ending1.png" alt="Ending scene" />
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
