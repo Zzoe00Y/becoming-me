@@ -32,7 +32,7 @@ const scenes = {
         titleId: "interaction-title",
         bodyId: "interaction-body",
         imageId: "childhood-scene-image",
-        defaultImage: "stage1room.png",
+        defaultImage: "pictures/stage1room.png",
         objects: {
             self: {
                 title: "Your Thoughts",
@@ -96,7 +96,7 @@ const scenes = {
                     "The closet feels deeper than it should. Most of the clothes are ordinary, but some pieces pull your attention immediately.",
                     "You imagine trying them on, not as a game exactly, but as a way of asking a question you do not know how to say out loud."
                 ],
-                image: "opencloset.png",
+                image: "pictures/opencloset.png",
                 choices: [
                     {
                         key: "childhood-closet-try",
@@ -833,25 +833,25 @@ function updateEnding() {
     if (stats.identity >= 8 && stats.support >= 6) {
         title.textContent = "Thriving in Chosen Community";
         text.textContent = "You have built a path where identity remains visible enough to feel real, and support helps carry you through institutions and intimacy alike.";
-        image.src = "ending1.png";
+        image.src = "pictures/ending1.png";
         image.alt = "Ending 1";
         visual.classList.remove("is-hidden");
     } else if (stats.safety >= 10 && stats.identity <= 3) {
         title.textContent = "Protected but Hidden";
         text.textContent = "You learned how to stay safe in spaces that punish difference, but safety often asked for silence and self-erasure.";
-        image.src = "ending2.png";
+        image.src = "pictures/ending2.png";
         image.alt = "Ending 2";
         visual.classList.remove("is-hidden");
     } else if (stats.identity >= 8 && stats.safety <= 3) {
         title.textContent = "Visible and Vulnerable";
         text.textContent = "You moved toward honesty and self-recognition, even when the world did not make that easy. The path is real, but still precarious.";
-        image.src = "ending3.png";
+        image.src = "pictures/ending3.png";
         image.alt = "Ending 3";
         visual.classList.remove("is-hidden");
     } else if (stats.support <= 1) {
         title.textContent = "Isolated Under Pressure";
         text.textContent = "Repeated pressure taught you to pull inward. This ending is not failure; it reveals what happens when support is scarce and institutions do not know how to hold you.";
-        image.src = "ending4.png";
+        image.src = "pictures/ending4.png";
         image.alt = "Ending 4";
         visual.classList.remove("is-hidden");
     } else {
