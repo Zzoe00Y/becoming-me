@@ -1,4 +1,4 @@
-# Becoming Me
+# Becoming Me🌈
 
 **Becoming Me** is a pixel-style interactive narrative game about queer/trans growth across different stages of life.  
 The project explores how identity, safety, and support are shaped by family, school, digital space, work, and medical institutions.
