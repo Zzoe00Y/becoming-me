@@ -590,3 +590,48 @@ body::before {
 .scene-helper p {
     margin: 0;
 }
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-text {
+    max-width: 600px;
+}
+
+.hero-pixel {
+    width: 160px;
+    image-rendering: pixelated;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffeef5, #e0f7ff);
+    padding: 12px;
+    margin-left: 40px;
+}
+
+.hero-pixel:hover {
+    transform: translateY(-4px) scale(1.04);
+    filter: saturate(1.2);
+    animation: rainbowGlow 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes rainbowGlow {
+    0% {
+        box-shadow:
+                0 0 6px rgba(255, 90, 90, 0.35),
+                0 0 12px rgba(255, 170, 70, 0.3),
+                0 0 18px rgba(255, 220, 90, 0.25);
+    }
+    50% {
+        box-shadow:
+                0 0 10px rgba(90, 220, 120, 0.35),
+                0 0 20px rgba(90, 170, 255, 0.3),
+                0 0 30px rgba(180, 120, 255, 0.25);
+    }
+    100% {
+        box-shadow:
+                0 0 8px rgba(255, 105, 180, 0.35),
+                0 0 16px rgba(120, 200, 255, 0.3),
+                0 0 24px rgba(255, 220, 120, 0.25);
+    }
+}
